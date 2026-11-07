@@ -1,0 +1,48 @@
+### Register User
+POST http://127.0.0.1:8000/Register/
+Content-Type: application/json
+
+{
+    "username": "Adhil",
+    "email": "Adhil@gmail.com",
+    "password": "Adhil"
+}
+
+### Get All Trips
+GET http://127.0.0.1:8000/trips/
+Accept: application/json
+Authorization: Basic Adhi:Adhi@123
+
+
+### Create Trip
+POST http://127.0.0.1:8000/trips/
+Content-Type: application/json
+Authorization: Basic Adhi:Adhi@123
+
+{
+    "title": "Kasol Trip",
+    "start_date": "2026-12-14",
+    "destination": "kasol",
+    "created_by": 1
+}
+
+###
+GET http://127.0.0.1:8000/trips/5/
+Accept: application/json
+Authorization: Basic Adhi:Adhi@123
+
+
+###
+PUT http://127.0.0.1:8000/trips/5/
+Content-Type:  application/json
+Authorization: Basic Adhi:Adhi@123
+
+{
+    "title": "Updated Kasol Trip",
+    "start_date": "2026-12-30",
+    "destination": "kasol",
+    "created_by":1
+}
+###
+DELETE http://127.0.0.1:8000/trips/6/
+Authorization: Basic Adhi:Adhi@123
