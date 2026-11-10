@@ -3,9 +3,9 @@ POST http://127.0.0.1:8000/Register/
 Content-Type: application/json
 
 {
-    "username": "Adhil",
-    "email": "Adhil@gmail.com",
-    "password": "Adhil"
+    "username": "Anjali",
+    "email": "Anjali@gmail.com",
+    "password": "Anjali"
 }
 
 ### Get All Trips
@@ -33,7 +33,7 @@ Authorization: Basic Adhi:Adhi@123
 
 
 ###
-PUT http://127.0.0.1:8000/trips/5/
+PUT http://127.0.0.1:8000/trips/7/
 Content-Type:  application/json
 Authorization: Basic Adhi:Adhi@123
 
@@ -44,5 +44,15 @@ Authorization: Basic Adhi:Adhi@123
     "created_by":1
 }
 ###
-DELETE http://127.0.0.1:8000/trips/6/
+DELETE http://127.0.0.1:8000/trips/4/
+Authorization: Basic Adhi:Adhi@123
+
+###
+GET http://127.0.0.1:8000/user/
+Accept: application/json
+
+
+###
+GET http://127.0.0.1:8000/trips/7/members/
+Accept: application/json
 Authorization: Basic Adhi:Adhi@123

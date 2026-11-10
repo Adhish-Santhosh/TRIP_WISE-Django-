@@ -12,3 +12,13 @@ class TripDb(models.Model):
     updated_at=models.DateTimeField(auto_now=True)
     def __str__(self):
         return self.title
+class TripMemberDb(models.Model):
+    trip=models.ForeignKey(TripDb,on_delete=models.CASCADE,related_name='Tripmember')
+    user=models.ForeignKey(User,on_delete=models.CASCADE,related_name='User_trips')
+    joined_at=models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        constraints=[models.UniqueConstraint(fields=['trip','user'],name='unique_trip_member')
+            ]    
+        def __str__(self):
+            return f"(self.user.username)-(self.trip.title)"  #Adhish - trip to kasol
